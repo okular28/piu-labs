@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Uwagi o formularzach HTML</title>
+  </head>
+  <body class="uwagi-body">
+    <header>
+      <h1 class="uwagi-h1">Uwagi o formularzach HTML</h1>
+      <p>
+        Formularze są jednym z najważniejszych elementów interakcji użytkownika
+        z witryną. Pozwalają przesyłać dane, logować się, rejestrować czy
+        kontaktować z administratorem strony.
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Zalety formularzy HTML</h2>
+        <ul>
+          <li>Umożliwiają łatwą interakcję użytkownika ze stroną.</li>
+          <li>Obsługiwane są natywnie przez wszystkie przeglądarki.</li>
+          <li>
+            Umożliwiają walidację danych po stronie klienta bez JavaScript.
+          </li>
+          <li>Proste do wdrożenia w połączeniu z mechanizmami backendowymi.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Wady i ograniczenia</h2>
+        <ul>
+          <li>
+            Bez JavaScript formularze mają ograniczoną interaktywność (brak
+            dynamicznej walidacji czy komunikatów błędów).
+          </li>
+          <li>
+            Nie mogą samodzielnie zapisywać ani modyfikować danych — wymagają
+            wsparcia serwera.
+          </li>
+          <li>
+            Trudniejsze w obsłudze na urządzeniach mobilnych, jeśli nie są
+            dobrze zaprojektowane.
+          </li>
+          <li>
+            Ograniczone możliwości stylizacji niektórych kontrolek (np. pola
+            <code>file</code>, <code>select</code>).
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Kiedy warto stosować formularze</h2>
+        <p>
+          Formularze HTML warto stosować zawsze wtedy, gdy chcemy zebrać dane od
+          użytkownika: np. przy logowaniu, zapisie na newsletter, wysyłaniu
+          wiadomości czy składaniu zamówienia. Sprawdzają się także w prostych
+          ankietach i konkursach.
+        </p>
+      </section>
+
+      <section>
+        <h2>Kiedy lepiej ich unikać lub wspomóc JavaScriptem</h2>
+        <p>
+          Formularze nie są potrzebne tam, gdzie interakcja wymaga
+          natychmiastowych reakcji (np. filtrowania danych bez przeładowania
+          strony), wtedy warto wspomóc je JavaScriptem lub frameworkami
+          frontendowymi.
+        </p>
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
