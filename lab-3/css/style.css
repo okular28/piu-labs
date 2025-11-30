@@ -53,6 +53,16 @@ a:hover {
   --polo-color: var(--blue);
   --polo-img: url('../images/polo_b.png');
   content: fit-content;
+  animation: cardEntry 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes cardEntry {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .colors {
@@ -108,6 +118,13 @@ a:hover {
   font-family: sans-serif;
   cursor: pointer;
   user-select: none;
+  transition: all 0.2s ease;
+}
+
+.m-box:hover {
+  border-color: var(--polo-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .h-wrapper {
@@ -130,11 +147,27 @@ button {
   cursor: pointer;
   font-size: 1rem;
   border: var(--text) 2px solid;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.4s ease, transform 0.1s ease,
+    box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .check:checked + .m-box {
   background: var(--polo-color);
   color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .S::after {
@@ -158,6 +191,18 @@ button {
   max-width: 500px;
   object-fit: cover;
   display: none;
+  animation: fadeInImage 0.5s ease-out forwards;
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .img-wrapper {
@@ -165,6 +210,8 @@ button {
   background-color: #fff;
   border-radius: 5px;
   max-width: 500px;
+  overflow: hidden;
+  transition: border-color 0.4s ease;
 }
 
 span {
@@ -175,6 +222,7 @@ span {
   border-radius: 5px;
   font-weight: 700;
   display: inline-block;
+  transition: background-color 0.4s ease;
 }
 
 .colors label {
@@ -239,6 +287,12 @@ span {
   margin-right: 10px;
   cursor: pointer;
   border: 3px solid transparent;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.2s ease;
+}
+
+.color:hover {
+  transform: scale(1.1);
 }
 
 .color.blue {
@@ -257,6 +311,7 @@ span {
 input[type='radio']:checked + .color {
   border-color: var(--text);
   box-shadow: 0 0 0 3px white inset;
+  transform: scale(1.15);
 }
 
 .grid-wrapper {
