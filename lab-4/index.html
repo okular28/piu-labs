@@ -8,5 +8,55 @@
   <body>
     <h1>Lab 4</h1>
     <a href="..">Powrót</a>
+
+    <header>
+      <h1>Tablica Kanban</h1>
+    </header>
+
+    <div class="kanban-board">
+      <div class="column" data-id="todo">
+        <div class="column-header">
+          <h2>Do zrobienia <span class="counter">(0)</span></h2>
+          <div class="column-controls">
+            <button class="btn-control" data-action="sort">Sortuj A-Z</button>
+            <button class="btn-control" data-action="color-column">
+              Koloruj kolumnę
+            </button>
+          </div>
+        </div>
+        <div class="card-list"></div>
+        <button class="btn-add">+ Dodaj kartę</button>
+      </div>
+
+      <div class="column" data-id="inprogress">
+        <div class="column-header">
+          <h2>W trakcie <span class="counter">(0)</span></h2>
+          <div class="column-controls">
+            <button class="btn-control" data-action="sort">Sortuj A-Z</button>
+            <button class="btn-control" data-action="color-column">
+              Koloruj kolumnę
+            </button>
+          </div>
+        </div>
+        <div class="card-list"></div>
+        <button class="btn-add">+ Dodaj kartę</button>
+      </div>
+
+      <div class="column" data-id="done">
+        <div class="column-header">
+          <h2>Zrobione <span class="counter">(0)</span></h2>
+          <div class="column-controls">
+            <button class="btn-control" data-action="sort">Sortuj A-Z</button>
+            <button class="btn-control" data-action="color-column">
+              Koloruj kolumnę
+            </button>
+          </div>
+        </div>
+        <div class="card-list"></div>
+        <button class="btn-add">+ Dodaj kartę</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
